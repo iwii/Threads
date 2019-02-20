@@ -2,7 +2,6 @@ package com.example.threads.model;
 
 public class Ping extends Thread {
 
-    String text = "ping";
 
     public void run() {
 
@@ -11,7 +10,7 @@ public class Ping extends Thread {
         synchronized (a) {
             for (int i = 0; i < 10; i++) {
                 try {
-                    System.out.println(text);
+                    getPing();
                     a.notify();
                     a.wait(500);
 
@@ -20,5 +19,10 @@ public class Ping extends Thread {
                 }
             }
         }
+    }
+
+    public void getPing() {
+
+        System.out.println("ping");
     }
 }

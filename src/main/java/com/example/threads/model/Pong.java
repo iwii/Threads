@@ -11,7 +11,7 @@ public class Pong extends Thread {
         synchronized (a) {
             for (int i = 0; i < 10; i++) {
                 try {
-                    System.out.println(text);
+                    getPong();
                     a.notify();
                     a.wait(500);
                 } catch (Exception ex) {
@@ -19,5 +19,10 @@ public class Pong extends Thread {
                 }
             }
         }
+    }
+
+    public void getPong() {
+
+      System.out.println("pong");
     }
 }

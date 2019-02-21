@@ -21,8 +21,12 @@ public class Pong extends Thread {
         }
     }
 
-    public void getPong() {
+    public String getPong() {
 
-      System.out.println("pong");
+     System.out.println("pong");
+
+        String result = "Pong";
+
+        return result;
     }
 }

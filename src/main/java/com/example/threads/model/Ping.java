@@ -21,8 +21,11 @@ public class Ping extends Thread {
         }
     }
 
-    public void getPing() {
+    public String getPing() {
 
         System.out.println("ping");
+        String result = "Ping";
+
+        return result;
     }
 }
